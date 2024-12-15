@@ -1,0 +1,14 @@
+[Unit]
+Description=Web Service (Deno)
+After=network.target
+
+[Service]
+Type=simple
+User=www
+Group=www
+ExecStart=/home/www/.deno/bin/deno run --allow-net /home/www/server.ts
+Restart=on-failure
+RestartSec=15s
+
+[Install]
+WantedBy=multi-user.target

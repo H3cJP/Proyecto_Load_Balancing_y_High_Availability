@@ -1,0 +1,14 @@
+[Unit]
+Description=SurrealDB server
+After=network.target
+
+[Service]
+Type=simple
+User=www
+Group=www
+ExecStart=/home/www/.surrealdb/surreal start --log debug --user root --pass abc123. -b 192.168.100.1:8081 surrealkv:///home/www/database/storage
+Restart=on-failure
+RestartSec=15s
+
+[Install]
+WantedBy=multi-user.target
