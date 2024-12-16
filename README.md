@@ -189,7 +189,7 @@ En `/etc/systemd/system`, agrego el archivo `surrealdb.service`
 Usando el usuario www:
 Agrego el archivo `server.ts` en `/home/www`
 
-Instalo deno en el servidor:
+Instalo Deno y SurrealDB en el servidor:
 
 ```
 curl -fsSL https://deno.land/install.sh | sh
